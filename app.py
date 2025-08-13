@@ -23,13 +23,13 @@ os.environ['OPENAI_API_KEY'] = os.getenv("OPENAI_API_KEY")
 def get_youtube_transcript(url):
     try:
         video_id = YouTube(url).video_id
-        st.write(f"Video ID: {video_id}") #new command
+        st.write(f"Video ID: {video_id}") 
         
         # Create API instance and fetch transcript directly
         api = YouTubeTranscriptApi()
         transcript_data = api.fetch(video_id, languages=['en'])
         text = " ".join([item.text for item in transcript_data])
-        st.write(f"Transcript length: {len(text)} characters") #new command
+        st.write(f"Transcript length: {len(text)} characters") 
         return text
     except TranscriptsDisabled:
         st.error("Transcripts Disabled")
