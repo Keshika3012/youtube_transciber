@@ -1,0 +1,10 @@
+streamlit
+langchain-community
+langchain
+pytube
+python-dotenv
+youtube-transcript-api
+openai
+faiss-cpu
+tiktoken
+urllib3<2.0
